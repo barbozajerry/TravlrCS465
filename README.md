@@ -1,2 +1,2 @@
 # TravlrCS465
-![Alt text](images/logo.jpg)
+![Alt text](images/logo.png)
