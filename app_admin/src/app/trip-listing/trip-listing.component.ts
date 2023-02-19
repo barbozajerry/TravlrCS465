@@ -15,7 +15,8 @@ trips: Trip[];
  message: string;
 constructor(private tripDataService: TripDataService, 
     private router: Router) { }
-    private addTrip(): void {
+
+private addTrip(): void {
         this.router.navigate(['add-trip']);
     }
 private getTrips(): void {

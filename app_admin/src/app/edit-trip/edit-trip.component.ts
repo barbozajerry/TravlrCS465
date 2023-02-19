@@ -23,34 +23,31 @@ export class EditTripComponent implements OnInit {
       // retrieve stashed tripId
       let tripCode = localStorage.getItem("tripCode");
       if (!tripCode) {
-      alert("Something wrong, couldn't find where I stashed tripCode!");
+      alert("Something wrong, couldn't find where I stashedtripCode!");
       this.router.navigate(['']);
       return;
       }
-      console.log('EditTripComponent#onInit found tripCode ' +
-     tripCode);
+      console.log('EditTripComponent#onInit found tripCode ' + tripCode);
       // initialize form
       this.editForm = this.formBuilder.group({
-        _id: [],
-        code: [tripCode, Validators.required],
-        name: ['', Validators.required],
-        length: ['', Validators.required],
-        start: ['', Validators.required],
-        resort: ['', Validators.required],
-        perPerson: ['', Validators.required],
-        image: ['', Validators.required],
-        description: ['', Validators.required],
+      _id: [],
+      code: [tripCode, Validators.required],
+      name: ['', Validators.required],
+      length: ['', Validators.required],
+      start: ['', Validators.required],
+      resort: ['', Validators.required],
+      perPerson: ['', Validators.required],
+      image: ['', Validators.required],
+      description: ['', Validators.required],
       })
-
-      console.log('EditTripComponent#onInit calling TripDataService#getTrip(\'' + tripCode + '\')');
-
+      console.log('EditTripComponent#onInit callingTripDataService#getTrip(\'' + tripCode + '\')');
       this.tripService.getTrip(tripCode)
-        .then(data => {
-          console.log(data);
-          this.editForm.patchValue(data[0]);
-        })
+      .then(data => {
+      console.log(data);
+      // Don't use editForm.setValue() as it will throwconsole error
+      this.editForm.patchValue(data[0]);
+      })
      }
-     
      onSubmit() {
       this.submitted = true;
       if (this.editForm.valid) {
@@ -60,5 +57,5 @@ export class EditTripComponent implements OnInit {
       this.router.navigate(['']);
       });
       }
-     }
-    }
+    } 
+  }
