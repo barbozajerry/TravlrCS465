@@ -4,9 +4,9 @@ const host = process.env.DB_HOST || '127.0.0.1'
 const dbURI = `mongodb://${host}/travlr`;
 
 
-const connect = () => {
-  setTimeout(() => mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }), 1000);
-}
+//const connect = () => {
+ // setTimeout(() => mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }), 1000);
+//}
 
 mongoose.connection.on('connected', () => {
   console.log('connected');
@@ -14,7 +14,7 @@ mongoose.connection.on('connected', () => {
 
 mongoose.connection.on('error', err => {
   console.log('error: ' + err);
-  return connect();
+  return mongoose.connect(dbURI);
 });
 
 mongoose.connection.on('disconnected', () => {
@@ -54,6 +54,7 @@ process.on('SIGTERM', () => {
   });
 });
 
-connect();
+mongoose.connect(dbURI);
 
-require('./travlr');
+require('./models/travlr');
+require('./models/user');
