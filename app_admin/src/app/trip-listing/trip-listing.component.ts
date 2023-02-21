@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 // import { trips } from '../data/trips';
 import { TripDataService } from '../services/trip-data.service';
 import { Trip } from '../models/trip';
+
 @Component({
 selector: 'app-trip-listing',
 templateUrl: './trip-listing.component.html',

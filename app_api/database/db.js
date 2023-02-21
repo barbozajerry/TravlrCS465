@@ -56,4 +56,5 @@ process.on('SIGTERM', () => {
 
 mongoose.connect(dbURI);
 
-require('./travlr');
+require('./models/travlr');
+require('./models/user');
