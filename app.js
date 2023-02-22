@@ -39,6 +39,7 @@ app.use('/api', (req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   next();
 });
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
@@ -57,7 +58,7 @@ app.use((err, req, res, next) => {
       .status(401)
       .json({"message": err.name + ": " + err.message});
   }
-})
+});
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
