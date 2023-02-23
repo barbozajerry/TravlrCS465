@@ -5,6 +5,7 @@ import { User } from '../models/user';
 import { AuthResponse } from '../models/authresponse';
 import { BROWSER_STORAGE } from '../storage';
 
+
 @Injectable()
 export class TripDataService {
 
@@ -58,8 +59,7 @@ export class TripDataService {
    public register(user: User): Promise<AuthResponse> {
     return this.makeAuthApiCall('register', user);
    }
-   private makeAuthApiCall(urlPath: string, user: User):
-   Promise<AuthResponse> {
+   private makeAuthApiCall(urlPath: string, user: User): Promise<AuthResponse> {
     const url: string = `${this.apiBaseUrl}/${urlPath}`;
     return this.http
     .post(url, user)
