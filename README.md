@@ -10,4 +10,5 @@ JavaScript is the programming language that brings web pages to life. JavaScript
 
 <h3>Testing</h3>
 <br>
+In this project, I began testing it by going into http://localhost:3000/ to see if the front-end is running properly and if it is not running properly, I would find these errors and fix them. I then began to test the back-end by going into http://localhost:4200/. I also used Devtools in Chrome to find any errors. 
 <h3>Reflecting</h3>
