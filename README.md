@@ -6,6 +6,8 @@ Express provides us with a simple and consistent interface for directing an inco
 <br>
 <h3>Functionality</h3>
 <br> 
+JavaScript is the programming language that brings web pages to life. JavaScript Object Notation (JSON), is derived from JavaScript that is used to format object data and making it a lightweight format for storing and tranfering data, for example when data is sent from the server to a web page.  
+
 <h3>Testing</h3>
 <br>
 <h3>Reflecting</h3>
