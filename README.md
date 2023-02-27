@@ -12,3 +12,5 @@ JavaScript is the programming language that brings web pages to life. JavaScript
 <br>
 In this project, I began testing it by going into http://localhost:3000/ to see if the front-end is running properly and if it is not running properly, I would find these errors and fix them. I then began to test the back-end by going into http://localhost:4200/. I also used Devtools in Chrome to find any errors. 
 <h3>Reflecting</h3>
+<br> 
+This course helped me become a better web developer since I learned a lot of new things to create a functional secure website with a focus on fullstack. Before this class I had some experience with front-end only mostly with HTML and CSS since I enjoy using my artistic side and my knowledge in UI/UX. This class gave me a great understanding on the back-end inclduing working with Mongoose, SPA, Express HTML, JavaScript, JSON ad security. 
